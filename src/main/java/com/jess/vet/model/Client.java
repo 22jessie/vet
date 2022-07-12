@@ -21,8 +21,4 @@ public class Client extends User {
     private List<Appointment> appointments;
     private String phoneNumb;
     
-    
-    
-    
-    
 }

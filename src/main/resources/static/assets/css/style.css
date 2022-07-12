@@ -23,6 +23,25 @@ body {
     min-height: 921px;
     padding:0;
 }
+
+
+
+.login input,p{color: #fff;
+    font-family: 'Vollkorn-Regular';
+    margin: 0;
+    font-size: 1.5em;
+    color: #146eb4;
+}
+
+
+
+
+
+
+
+
+
+
 body a{
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -30,6 +49,14 @@ body a{
 	-o-transition: 0.5s all ease;
 	-ms-transition: 0.5s all ease;
 }
+
+.login input,p{color: #fff;
+    font-family: 'Vollkorn-Regular';
+    margin: 0;
+    font-size: 1.5em;
+    color: #146eb4;
+}
+
 p{
 	margin:0;
 }

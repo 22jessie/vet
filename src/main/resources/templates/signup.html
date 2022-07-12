@@ -78,22 +78,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!--header-end-->
 	<!--banner-starts-->
-        <div style="border: solid blue;display:inline-block;width: 100%">
-            <div class="login-container" style="width:70%; border: solid black;display:inline-block;
-                 padding:10%">
-                <div class="login">
-                    <p>email:</p> <input type="text"> <br>
-                    <p>password:</p><input type="password"><br>
-                </div>
-                <br>
-                <div class="col-md-2"><input type="submit" value="Login"></div>
-                <a href="#">New user?</a>
-            </div>
-            <div th:replace="navbar :: navbar"></div>
-        </div>
-	
-        
-            
+	<div class="banner">
+		<div class="container">
+			<div class="banner-top">
+				<div th:replace="navBar :: navBar"> </div>
+                                <form>
+                                    <h4>Name:</h4> <input type="text"><br>
+                                    <h4>Email:</h4> <input type="text"><br>
+                                    <h4>Phone number</h4> <input type="text"><br>
+                                    <h4>Password:</h4> <input type="text"><br>
+                                    <h4>Password confirmation:</h4> <input type="password"><br>
+                                    <input type="submit" value="Register">
+                                </form>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
 	<!--banner-starts-->
 	<!--script-for-menu-->
 		<script>

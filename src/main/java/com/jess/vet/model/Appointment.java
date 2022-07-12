@@ -5,10 +5,18 @@
  */
 package com.jess.vet.model;
 
+import java.util.Date;
+import lombok.Getter;
+import lombok.Setter;
+
 /**
  *
  * @author jessica-22
  */
+@Getter
+@Setter
 class Appointment {
-    
+    private Client client;
+    private Veterinarian vet;
+    private Date date;
 }
