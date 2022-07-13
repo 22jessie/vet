@@ -28,3 +28,21 @@ and open the template in the editor.
     font-size: 20px;
     text-align: center;
 }
+
+#login-area{
+    display:inline-block;
+    width: 100%;
+    padding-top: 1px;
+}
+
+
+#login-container{
+    width:70%; 
+    display:inline-block;
+    padding:0 10% 10% 15%;
+    margin-top: 20px;
+}
+
+.login{
+    margin-top: 40px;
+}

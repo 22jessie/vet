@@ -24,4 +24,5 @@ class Pet {
     private char gender;
     private String breed;
     private String color;
+    private Client owner;
 }
