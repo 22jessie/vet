@@ -5,9 +5,15 @@
  */
 package com.jess.vet.model;
 
+import com.jess.vet.validations.DateValidation;
 import java.util.Date;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
@@ -15,8 +21,17 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-class Appointment {
+class Appointment extends BaseEntity{
+    
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO,generator="native")
+    @GenericGenerator(name="native",strategy="native")
+    private int id;
+    
+    @DateValidation
+    @NotBlank
+    private String date;
+    
     private Client client;
     private Veterinarian vet;
-    private Date date;
 }

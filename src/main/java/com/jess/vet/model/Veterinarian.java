@@ -6,6 +6,9 @@
 package com.jess.vet.model;
 
 import java.util.List;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,8 +20,19 @@ import lombok.Setter;
 @Getter
 @Setter
 class Veterinarian extends User{
-    private String phoneNumber;
+    
+    @NotBlank(message="Phone number must not be blank")
+    @Pattern(regexp="^$|[0-9]{10}",message="Phone number must be 10 digits")
+    private String phoneNumb;
+    
+    @NotBlank(message="Specialty cannot be blank")
+    @Size(max=20)
     private String specialty;
+    
+    @NotBlank(message="About me cannot be blank")
+    @Size(max=200)
     private String info;
+    
+    
     private List<Appointment> appointments;
 }

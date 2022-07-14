@@ -7,6 +7,8 @@ package com.jess.vet.model;
 
 import java.util.Date;
 import java.util.List;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,8 +19,14 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Client extends User {
+    
+    @NotBlank(message="Phone number must not be blank")
+    @Pattern(regexp="^$|[0-9]{10}",message="Phone number must be 10 digits")
+    private String phoneNumb;
+    
     private List<Pet> pets;
     private List<Appointment> appointments;
-    private String phoneNumb;
+    
+    
     
 }

@@ -5,8 +5,8 @@ CREATE TABLE IF NOT EXISTS `client`   (
 	`name` varchar(40) NOT NULL,
 	`email` varchar(40) NOT NULL,
 	`pwd` varchar(200) NOT NULL,
-	`role` varchar(200) NOT NULL,
-    	`phone_numb` varchar(20) NOT NULL,
+	`role` varchar(10) NOT NULL,
+    	`phone_numb` varchar(10) NOT NULL,
     	`created_at` TIMESTAMP NOT NULL,
 	`created_by` varchar(50) NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -19,10 +19,23 @@ CREATE TABLE IF NOT EXISTS `veterinarian`  (
 	`name` varchar(40) NOT NULL,
 	`email` varchar(40) NOT NULL,
 	`pwd` varchar(200) NOT NULL,
-	`role` varchar(200) NOT NULL,
-    	`phone_numb` varchar(20) NOT NULL,
+	`role` varchar(10) NOT NULL,
+    	`phone_numb` varchar(10) NOT NULL,
     	`specialty` varchar(20) NOT NULL,
     	`info` varchar(200) NOT NULL,
+    	`created_at` TIMESTAMP NOT NULL,
+	`created_by` varchar(50) NOT NULL,
+	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	`updated_by` varchar(50) DEFAULT NULL
+);
+
+
+CREATE TABLE IF NOT EXISTS `admin`  (
+	`admin_id` int NOT NULL  AUTO_INCREMENT  PRIMARY KEY,
+	`name` varchar(40) NOT NULL,
+	`email` varchar(40) NOT NULL,
+	`pwd` varchar(200) NOT NULL,
+	`role` varchar(10) NOT NULL,
     	`created_at` TIMESTAMP NOT NULL,
 	`created_by` varchar(50) NOT NULL,
 	`updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
