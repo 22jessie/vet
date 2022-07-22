@@ -82,7 +82,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div>
             <div id="dashboard">
                 <div class="dashboard-element" >
-                <a href="">Veterinarians</a>
+                <a th:href="@{/admin/vets}">Veterinarians</a>
+                </div>
+                <div class="dashboard-element" >
+                    <a href="">Admins</a>
                 </div>
                 <div class="dashboard-element" >
                     <a href="">Services</a>
@@ -104,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 </div>
                 <div class="dashboard-element" >
                     <a href="">Messages</a>
-                </div>
+                </div>                
             </div>
             <div th:replace="navbar :: navbar"></div>
         </div>    
