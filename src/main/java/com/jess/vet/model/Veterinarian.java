@@ -19,7 +19,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-class Veterinarian extends User{
+public class Veterinarian extends User{
     
     @NotBlank(message="Phone number must not be blank")
     @Pattern(regexp="^$|[0-9]{10}",message="Phone number must be 10 digits")

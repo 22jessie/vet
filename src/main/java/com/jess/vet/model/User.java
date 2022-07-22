@@ -5,14 +5,12 @@
  */
 package com.jess.vet.model;
 
-import java.util.List;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,7 +32,8 @@ public class User extends BaseEntity{
     private int id;
     
     @NotBlank(message="Name cannot be blank")
-    @Size(min=15,max=40)
+    @Size(min=7, message="Name must contain at least 15 characters")
+    @Size(max=40, message="Name cannot exceed 40 characters")
     private String name;
     
     @NotBlank(message="Email cannot be blank")
@@ -42,10 +41,10 @@ public class User extends BaseEntity{
     private String email;
     
     @NotBlank(message="Password cannot be blank")
-    @Pattern(regexp="(?=.\\d)(?=.[a-z])(?=.[A-Z])((?=.\\W)",
-            message="Password should contain at least one capital letter, one digit and one lower case letter")
-    @Size(min=8,max=15)
+    @Size(min=8, message="Password must contain at least 8 characters")
+    @Size(max=15, message="Password cannot exceed 15 characters")
     private String password;
+    
         
     private String role;
 }
