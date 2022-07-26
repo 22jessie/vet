@@ -21,7 +21,7 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Getter
 @Setter
-class Appointment extends BaseEntity{
+public class Appointment extends BaseEntity{
     
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO,generator="native")

@@ -5,6 +5,7 @@
  */
 package com.jess.vet.controllers;
 
+import com.jess.vet.model.Admin;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,6 +30,21 @@ public class AdminController {
     public String registerVet(Model model){
         model.addAttribute("vet",new Veterinarian());
         return "vets.html";
+    }
+    
+    @GetMapping("/admins")
+    public String registerAdmin(Model model){
+        model.addAttribute("admin",new Admin());
+        return "admins.html";
+    }
+    
+    @PostMapping("/register-admin")
+    public String registerAdmin(@Valid @ModelAttribute("admin")Admin admin, Errors errorsList){
+        if(errorsList.hasErrors()){
+            return "admins.html";
+        }
+        System.out.println("Admin registered");
+        return "redirect:/admin/admins";
     }
     
     @PostMapping("/register-vet")

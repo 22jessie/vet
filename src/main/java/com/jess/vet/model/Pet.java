@@ -23,7 +23,7 @@ import org.hibernate.annotations.GenericGenerator;
  */
 @Getter
 @Setter
-class Pet extends BaseEntity{
+public class Pet extends BaseEntity{
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO,generator="native")
     @GenericGenerator(name="native",strategy="native")
